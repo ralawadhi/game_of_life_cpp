@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <SFML/Graphics.hpp>
 
 #include "gof.h"
 
@@ -15,26 +14,7 @@ int main(){
 
     std::vector<int> new_vec(length,0);
 
-    // for (int i=0; i<=length-1;i++){
-    //     int neighNo{0};
 
-
-    //     neighNo = neighbourCount(vec, length, i);
-    //     // std::cout<<neighNo<<',';
-    //     if (neighNo==1){
-    //         new_vec[i]=1;
-    //     }
-    //     else if (neighNo==2)
-    //     {
-    //         new_vec[i]=0;
-    //     }
-    //     else{
-    //         new_vec[i]=0;
-    //     }
-        
-    //     std::cout<< new_vec[i]<<',';
-        
-    // }
     for(int i:vec){
         if(i==0){
             std::cout<<'.';
@@ -67,26 +47,6 @@ int main(){
     }
     vec = new_vec;
     }
-
-
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
-
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        window.clear();
-        window.draw(shape);
-        window.display();
-    }
-
 
 
     return 0;

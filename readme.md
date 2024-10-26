@@ -1,0 +1,1 @@
+This is a my attempt at programming Wolfram's elementary Cellular Automata in C++. Next step is to visualise the cells using raylib or other graphics libraries.
